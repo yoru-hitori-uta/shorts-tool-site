@@ -1,0 +1,5 @@
+# 誤って置いても公開されないように（このリポジトリには認証情報を置かない）
+client_secret*.json
+token.json
+*.json
+.env
