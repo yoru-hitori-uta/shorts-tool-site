@@ -43,7 +43,8 @@ p, li { overflow-wrap: anywhere; }
 
 a { color: var(--accent); }
 
-nav.lang { display: flex; gap: 16px; font-size: 0.95rem; margin: 8px 0 0; }
+nav.lang { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.95rem; margin: 8px 0 0; }
+nav.lang a { white-space: nowrap; }
 
 .card {
   background: var(--card);
@@ -52,6 +53,15 @@ nav.lang { display: flex; gap: 16px; font-size: 0.95rem; margin: 8px 0 0; }
   padding: 16px 20px;
   margin: 16px 0;
 }
+
+.notice {
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 0 24px;
+  background: var(--card);
+}
+.notice p { margin: 6px 0; }
 
 footer {
   margin-top: 56px;
