@@ -11,7 +11,7 @@
 <main>
   <header>
     <h1>プライバシーポリシー<br><span class="muted">Privacy Policy – Shorts Publishing Tool</span></h1>
-    <p class="muted">制定日・最終更新日 / Effective date &amp; last updated: 2026-10-05</p>
+    <p class="muted">制定日 / Effective date: 2026-10-05　最終更新日 / Last updated: 2026-10-14</p>
     <nav class="lang" aria-label="Language">
       <a href="#ja">日本語</a>
       <a href="#en">English</a>
@@ -38,22 +38,24 @@
     </p>
 
     <h2>3. 取得する情報</h2>
-    <p>本ツールが Google アカウントに求める権限は、次の1つだけです。</p>
+    <p>本ツールが Google アカウントに求める権限は、次の2つだけです。</p>
     <ul>
       <li><strong>YouTube への動画のアップロード権限</strong>（OAuth スコープ <code>https://www.googleapis.com/auth/youtube.upload</code>）：運営者自身のチャンネルに動画をアップロードし、タイトル・説明文・公開設定・公開日時を設定するために使います。</li>
+      <li><strong>YouTube アカウントの閲覧権限</strong>（OAuth スコープ <code>https://www.googleapis.com/auth/youtube.readonly</code>）：運営者自身がアップロードした動画が公開されたかを確認して決めた順番で公開するため、同じ動画を二重に投稿しないよう自分のチャンネルのアップロード一覧を確認するため、および保存している動画 ID が YouTube に存在するかを定期的に確認するために使います。</li>
     </ul>
     <p>
       本ツールは、上記の権限で得られる認証情報（OAuth のアクセストークンとリフレッシュトークン）と、
-      アップロードした動画の ID・公開日時を扱います。
+      運営者自身の動画の ID・公開日時・公開状態を扱います。
       視聴者の情報、コメント、再生データ、他のユーザーのアカウント情報、運営者の氏名・メールアドレスなどの個人情報は取得しません。
     </p>
 
     <h2>4. 情報の利用目的</h2>
-    <p>取得した情報は、運営者のチャンネルへの動画の投稿と、投稿状況（未投稿・投稿済み）の記録のためだけに使います。</p>
+    <p>取得した情報は、運営者のチャンネルへの動画の投稿、公開の順番の管理、投稿状況（未投稿・投稿済み）の記録のためだけに使います。</p>
 
     <h2>5. 保存場所と第三者への提供</h2>
     <ul>
       <li>認証情報と投稿記録は、<strong>運営者のパソコンの中にだけ</strong>保存します。外部のサーバーやクラウドには保存・送信しません（動画のアップロード先である YouTube を除きます）。</li>
+      <li>動画の公開状態は保存せず、必要なときに YouTube へ問い合わせます。保存している動画 ID は20日ごとに YouTube で確認し直し、存在しない動画の ID は記録から削除します。30日以内に確認できなかった ID も削除します（進行中の投稿を再開するために必要な場合は、確認できるまで処理を止めて保持します）。動画 ID や公開状態を含む動作の記録（ログ・エラーの記録）は30日で削除します。</li>
       <li>取得した情報を第三者に提供・販売・共有することはありません。</li>
       <li>本ツールおよび本サイトは、第三者による広告の配信を行いません。</li>
       <li>本ツールおよび本サイトは、Cookie や類似の技術を使ってユーザーの端末の情報を保存・取得することはありません。アクセス解析も行っていません。</li>
@@ -99,23 +101,25 @@
     </p>
 
     <h2>3. Information we access</h2>
-    <p>The Tool requests only one permission from the Google account:</p>
+    <p>The Tool requests only the following two permissions from the Google account:</p>
     <ul>
       <li><strong>Permission to upload videos to YouTube</strong> (OAuth scope <code>https://www.googleapis.com/auth/youtube.upload</code>): used to upload videos to the Operator’s own channel and to set their title, description, privacy status, and publish time.</li>
+      <li><strong>Permission to view the YouTube account</strong> (OAuth scope <code>https://www.googleapis.com/auth/youtube.readonly</code>): used to check whether the Operator’s own uploaded videos have been published so that they are released in the planned order, to check the Operator’s own upload list so that the same video is never uploaded twice, and to periodically confirm that the stored video IDs still exist on YouTube.</li>
     </ul>
     <p>
       The Tool handles the credentials obtained through this permission (OAuth access and refresh tokens)
-      and the IDs and publish times of the uploaded videos.
+      and the IDs, publish times, and privacy status of the Operator’s own videos.
       It does not collect viewer information, comments, analytics data, other users’ account information,
       or personal information such as names or email addresses.
     </p>
 
     <h2>4. How we use information</h2>
-    <p>The information is used only to upload videos to the Operator’s channel and to keep a record of upload status (not yet uploaded / uploaded).</p>
+    <p>The information is used only to upload videos to the Operator’s channel, to manage the order in which they are published, and to keep a record of upload status (not yet uploaded / uploaded).</p>
 
     <h2>5. Storage and sharing</h2>
     <ul>
       <li>Credentials and upload records are stored <strong>only on the Operator’s own computer</strong>. They are not stored on or sent to any external server or cloud service (other than YouTube itself, where the videos are uploaded).</li>
+      <li>The privacy status of videos is not stored; it is requested from YouTube when needed. Stored video IDs are re-checked on YouTube every 20 days, and IDs of videos that no longer exist are deleted from the records. IDs that cannot be re-checked within 30 days are also deleted (if they are needed to resume an upload in progress, processing is paused and they are kept until they can be checked). Operation records that contain video IDs or privacy status (logs and error records) are deleted after 30 days.</li>
       <li>We do not provide, sell, or share any of this information with third parties.</li>
       <li>Neither the Tool nor this website allows third parties to serve content, including advertisements.</li>
       <li>Neither the Tool nor this website stores, accesses, or collects information on or from users’ devices, including through cookies or similar technologies. No analytics are used.</li>
